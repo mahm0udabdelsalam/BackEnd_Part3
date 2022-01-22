@@ -5,8 +5,8 @@
 // const cors = require('cors')
 const app = require('./app')
 const http = require('http')
-const config = require('./util/config')
-const logger = require('./util/logger')
+const config = require('./utils/config')
+const logger = require('./utils/logger')
 
 
 const server = http.createServer(app)
