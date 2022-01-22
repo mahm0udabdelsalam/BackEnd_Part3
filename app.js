@@ -8,7 +8,7 @@ const notesRouter = require('./controllers/notes')
 
 const app = express()
 
-logger.info('Connecting to', config.MONGODB_URI)
+logger.info('Connecting to ', config.MONGODB_URI)
 
 mongoose.connect(config.MONGODB_URI)
   .then(() => {
@@ -21,7 +21,7 @@ mongoose.connect(config.MONGODB_URI)
 app.use(cors())
 app.use(express.static('build'))
 app.use(express.json())
-app.use(middleware.requestLogger)
+app.use(middleware.reqLogger)
 
 app.use('/api/notes', notesRouter)
 
